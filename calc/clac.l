@@ -1,0 +1,10 @@
+alpha [a-zA-Z]
+digit [0-9]
+
+%%
+
+[ \t\n]
+{digit}+ { yylval = atoi(yytext); return NUM; }
+. return yytext[0];
+
+%%
